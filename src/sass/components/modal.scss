@@ -1,6 +1,11 @@
 .modal-top {
+  margin: 0;
   padding-top: 58px;
   padding-bottom: 158px;
+  @include for-size(tablet-landscape) {
+    padding-top: 41px;
+    padding-bottom: 154px;
+  }
 }
 
 .modal-logo {
@@ -22,4 +27,16 @@
 
 .box-logo .modal-title {
   margin-top: 10px;
+}
+
+.library-btn {
+  @include for-size(tablet-portrait) {
+    display: none;
+  }
+  @include for-size(tablet-landscape) {
+    display: flex;
+  }
+  @include for-size(desktop) {
+    display: none;
+  }
 }
